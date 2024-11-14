@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizance</title>
+    <link rel="icon" href="./logo.jpg">
+    <link rel="stylesheet" href="landingpage.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Itim&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box login">
+            <form action="">
+                <h1>LogIn</h1>
+                <div class="input-box">
+                    <input type="email" placeholder="Username i.e Email" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="forget-link">
+                    <a href="">Forget Password?</a>
+                </div>
+                <a href="index.html" target="" class="btn btn-primary">Login as Guest</a>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form action="">
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <input type="email" placeholder="Username i.e Email" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Confirm Password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button type="sumbit" class="butn">Register</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="toggle-box">
+        <div class="toggle-panel toggle-left">
+            <h1>Welcome to Quiznce</h1>
+            <p>Don't have an account?</p>
+            <button class="butn">Register</button>
+        </div>
+    </div>
+
+</body>
+
+    
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+  
+    $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        window.location.hash = hash;
+      });
+    }
+    });
+    });
+    </script>
+</html>
